@@ -10,7 +10,7 @@ fetch(API_URL)
     })
     .then(data => {
         let lista = document.getElementById("tendencias");
-        lista.innerHTML = ""; // Limpiar lista antes de agregar nuevos datos
+        lista.innerHTML = ""; // Limpiar lista antes de agregar datos
 
         data.negocios.forEach(item => {
             let li = document.createElement("li");
