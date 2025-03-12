@@ -28,10 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.negocios.forEach(item => {
                 let li = document.createElement("li");
                 li.textContent = item;
-                li.style.padding = "10px";
-                li.style.margin = "5px";
-                li.style.backgroundColor = "#f0f0f0";
-                li.style.borderRadius = "5px";
+                li.className = "list-group-item list-group-item-light text-center";
                 lista.appendChild(li);
             });
 
