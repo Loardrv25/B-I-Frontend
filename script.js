@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(API_URL)
         .then(response => {
             console.log("📡 Respuesta recibida del backend:", response);
-
             if (!response.ok) {
                 throw new Error(`❌ Error en la API: ${response.status} ${response.statusText}`);
             }
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             console.log("📊 Datos recibidos:", data);
-            
+
             let lista = document.getElementById("tendencias");
             if (!lista) {
                 console.error("❌ Elemento con ID 'tendencias' no encontrado en el HTML.");
@@ -29,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
             data.negocios.forEach(item => {
                 let li = document.createElement("li");
                 li.textContent = item;
+                li.style.padding = "10px";
+                li.style.margin = "5px";
+                li.style.backgroundColor = "#f0f0f0";
+                li.style.borderRadius = "5px";
                 lista.appendChild(li);
             });
 
